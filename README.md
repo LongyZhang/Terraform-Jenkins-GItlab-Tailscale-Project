@@ -17,7 +17,7 @@ This project deploys a Jenkins GItlab CI/CD and docker pipeline on an EC2 instan
 - **Tailscale** advertise private subnet from VPN EC2 instance to securely access private nodes
 - **Security Groups** managed in a separate Terraform module
 
-
+![Architecture Diagram](./diagram/network-diagram.png)
 #
 ```bash
 .
@@ -32,3 +32,6 @@ This project deploys a Jenkins GItlab CI/CD and docker pipeline on an EC2 instan
 │   └── user_data.sh   # Jenkins setup script
 └── README.md
 '''
+
+
+##
