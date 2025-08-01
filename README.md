@@ -18,25 +18,17 @@ This project deploys a Jenkins GItlab CI/CD and docker pipeline on an EC2 instan
 - **Security Groups** managed in a separate Terraform module
 
 
-# Your new directory structure should look like this:
 #
-# terraform-infrastructure/
-# ├── main.tf
-# ├── variables.tf
-# ├── outputs.tf
-# ├── terraform.tfvars (optional)
-# ├── user_data/
-# │   └── user_data.sh
-# └── modules/
-#     ├── vpc/
-#     │   ├── main.tf
-#     │   ├── variables.tf
-#     │   └── outputs.tf
-#     ├── security/
-#     │   ├── main.tf
-#     │   ├── variables.tf
-#     │   └── outputs.tf
-#     └── ec2/
-#         ├── main.tf
-#         ├── variables.tf
-#         └── outputs.tf
+```bash
+.
+├── main.tf                  # Root module
+├── variables.tf             # Input variables
+├── outputs.tf               # Terraform outputs
+├── modules/
+│   ├── vpc/                 # VPC, subnets, IGW, NAT Gateway
+│   ├── ec2/                 # Jenkins + VPN + app instances
+│   └── security/            # Security groups
+├── user_data/
+│   └── user_data.sh   # Jenkins setup script
+└── README.md
+'''
