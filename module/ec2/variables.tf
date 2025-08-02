@@ -63,3 +63,10 @@ variable "availability_zone" {
     description = "Availability zone for the EBS volume"
     type        = string
 }
+
+
+variable "allow_access_from_vpn_node" {
+    description = "Security group allowing access from home IP"
+    type        = string
+  
+}

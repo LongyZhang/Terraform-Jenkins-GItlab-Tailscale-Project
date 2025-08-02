@@ -27,7 +27,7 @@ resource "aws_instance" "private_nodes" {
   ami           = data.aws_ami.amazon_linux.id
   instance_type = var.instance_type
   subnet_id     = var.private_suibnet_id
-  security_groups = [var.private_security_group]
+  security_groups = [var.private_security_group, var.allow_access_from_vpn_node]
   iam_instance_profile = var.iam_instance_profile
   key_name = var.key_name
   user_data = file("user_data/user_data.sh")

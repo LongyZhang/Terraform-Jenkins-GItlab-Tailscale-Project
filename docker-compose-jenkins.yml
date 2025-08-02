@@ -1,0 +1,12 @@
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    volumes:
+      - jenkins_home:/data/jenkins_home:/var/jenkins_home
+  ssh-agent:
+    image: jenkins/ssh-agent
+volumes:
+  jenkins_home:

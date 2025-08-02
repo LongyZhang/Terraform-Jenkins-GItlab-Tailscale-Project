@@ -20,3 +20,9 @@ output "iam_instance_profile" {
   value       = aws_iam_instance_profile.ssm_profile.name
   
 }
+
+output "allow_access_from_vpn_node" {
+  description = "Security group allowing access from home IP"
+  value       = aws_security_group.allow_access_from_vpn_node.id
+  
+}

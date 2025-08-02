@@ -36,6 +36,15 @@ volumes:
 
 cat /etc/gitlab/initial_root_password to get root password
 
+
+  sudo vim /etc/docker/daemon.json
+   {
+      "data-root": "/data/docker"
+    }
+
+
+sudo tailscale up --reset
+
 sudo tailscale set --advertise-routes=10.0.5.0/24
 
-
+sudo tailscale up --accept-routes

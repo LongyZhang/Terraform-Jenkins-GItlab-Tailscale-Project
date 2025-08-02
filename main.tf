@@ -46,6 +46,7 @@ module "ec2" {
     instance_type          = var.instance_type
     private_suibnet_id     = module.vpc.private_subnet_id
     public_suibnet_id      = module.vpc.public_subnet_id
+    allow_access_from_vpn_node = module.security.allow_access_from_vpn_node
     private_security_group = module.security.private_security_group
     public_security_group  = module.security.public_security_group
     iam_instance_profile     = module.security.iam_instance_profile
