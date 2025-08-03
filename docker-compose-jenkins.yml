@@ -6,6 +6,15 @@ services:
     restart: unless-stopped
     volumes:
       - jenkins_home:/data/jenkins_home:/var/jenkins_home
+            - /var/run/docker.sock:/var/run/docker.sock
+                  - /usr/bin/docker:/usr/bin/docker:ro
+
+    environment:
+      - DOCKER_HOST=unix:///var/run/docker.sock
+    user: root
+
+    group_add:
+      - ${DOCKER_GID:-999}
   ssh-agent:
     image: jenkins/ssh-agent
 volumes:
