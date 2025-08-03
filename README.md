@@ -42,6 +42,7 @@ Jenkins → SSH deploys to Docker Server
 Docker Server → Serves React app to users
 
 ![Architecture Diagram](./diagram/network-diagram.png)
+![Architecture Diagram](./diagram/image.png)
 #
 ```bash
 .
@@ -55,7 +56,7 @@ Docker Server → Serves React app to users
 ├── user_data/
 │   └── user_data.sh   # Jenkins setup script
 └── README.md
-'''bash
+'''
 
 
 ##
@@ -132,4 +133,3 @@ Developer (via VPN)
 └─────────────────────────────────────────┘
 
 
-![Architecture Diagram](./diagram/image.png)
