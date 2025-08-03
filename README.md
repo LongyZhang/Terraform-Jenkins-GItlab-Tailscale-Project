@@ -55,7 +55,7 @@ Docker Server → Serves React app to users
 ├── user_data/
 │   └── user_data.sh   # Jenkins setup script
 └── README.md
-'''
+'''bash
 
 
 ##
@@ -110,8 +110,6 @@ Dont worry about IP address, Cloudguru sandbox will clean up my sandbox every 4 
                      │ Storage   │         │ Execution │       │ Running   │
                      └───────────┘         └───────────┘       └───────────┘
 
-![Architecture Diagram](./diagram/image.png)
-
 
 🔌 Connection Flow
 Developer (via VPN)
@@ -132,3 +130,6 @@ Developer (via VPN)
 │                                         │
 │  End Users ──http://10.0.5.88──▶ React App │
 └─────────────────────────────────────────┘
+
+
+![Architecture Diagram](./diagram/image.png)
