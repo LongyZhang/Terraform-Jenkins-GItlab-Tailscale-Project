@@ -41,7 +41,7 @@ resource "aws_security_group" "allow_access_from_vpn_node" {
   ## how make this autehntication is safe? we have admin dashboard to approve the subnet route.connection {
   
   
-  name        = "allow_access_from_home_ip"
+  name        = "allow_access_from_tailscale_vpn_node"
   description = "allow_access_from_home_ip"
   vpc_id      = var.vpc_id
 

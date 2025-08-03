@@ -52,9 +52,15 @@ curl -fsSL https://tailscale.com/install.sh | sh
     echo "Mounting $VOLUME_DEVICE to $MOUNT_POINT..."
     sudo mount -a
 
-sudo yum install docker docker-compose -y
-sudo systemctl start docker
-sudo systemctl enable docker
 
-sudo usermod -aG docker ec2-user
 
+## enable tailscale forward routing
+
+
+echo 'net.ipv4.ip_forward = 1' | sudo tee -a /etc/sysctl.conf
+echo 'net.ipv6.conf.all.forwarding = 1' | sudo tee -a /etc/sysctl.conf
+sudo sysctl -p /etc/sysctl.conf
+
+
+
+    
