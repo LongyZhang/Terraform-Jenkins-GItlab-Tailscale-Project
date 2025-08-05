@@ -73,6 +73,8 @@ The infrastructure deploys a Jenkins GitLab CI/CD and Docker pipeline on EC2 ins
 ## 🔄 Gitlab CI Example
 ![Gitlab CI](./diagram/Gitlab-CI.png)
 
+
+
 ## 🔄 Jenkins CD Example
 ![Jenkins CD](./diagram/Jenkins-CD.png)
 
