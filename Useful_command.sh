@@ -42,6 +42,12 @@ cat /etc/gitlab/initial_root_password to get root password
       "data-root": "/data/docker"
     }
 
+docker pull gitlab/gitlab-ce
+docker pull jenkins/jenkins
+
+docker-compose up -d
+
+sudo tailscale up
 
 sudo tailscale up --reset
 
