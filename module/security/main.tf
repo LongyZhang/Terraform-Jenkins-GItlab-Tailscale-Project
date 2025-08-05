@@ -102,7 +102,7 @@ resource "aws_security_group" "allow_access_from_private_subnet" {
     cidr_blocks = [var.private_subnet_cidr]
   }
   ingress {
-    description = "HTTP from private subnet"
+    description = "Allow the GItlab talk to Jenkins from private subnet"
     from_port   = 8080
     to_port     = 8080
     protocol    = "tcp"
