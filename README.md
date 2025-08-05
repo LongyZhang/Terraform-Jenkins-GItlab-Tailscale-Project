@@ -71,7 +71,7 @@ The infrastructure deploys a Jenkins GitLab CI/CD and Docker pipeline on EC2 ins
 ```
 
 ## 🔄 Gitlab CI Example
-![Gitlab CI](./diagram/Gitlab.png)
+![Gitlab](./diagram/Gitlab.png)
 
 
 
