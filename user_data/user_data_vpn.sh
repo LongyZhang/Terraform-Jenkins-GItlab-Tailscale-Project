@@ -63,4 +63,5 @@ sudo sysctl -p /etc/sysctl.conf
 
 
 
-    
+sudo yum install telnet -y
+
