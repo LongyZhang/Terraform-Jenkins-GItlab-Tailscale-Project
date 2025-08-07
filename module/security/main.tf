@@ -92,7 +92,11 @@ resource "aws_security_group" "allow_access_from_vpn_node" {
 resource "aws_security_group" "allow_access_from_private_subnet" {
   name_prefix = "allow_ssh_"
   vpc_id      = var.vpc_id
-
+ 
+  ## I want to allow the private nodes to talk to each other
+  ## this is needed for the private nodes to talk to each other
+  ## Gitlab to talk with Jenkins from port 8080
+  ## Jenkins to talk with Gitlab from port 8929
   
   ingress {
     description = "HTTP from private subnet"

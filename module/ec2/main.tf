@@ -22,6 +22,7 @@ data "aws_ami" "amazon_linux" {
 
 ## EC2 Instance Configuration
 
+
 resource "aws_instance" "private_nodes" {
   count         = length(var.private_instance_names)
   ami           = data.aws_ami.amazon_linux.id
